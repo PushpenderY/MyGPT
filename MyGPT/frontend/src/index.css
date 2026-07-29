@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #212121;
+  color: #ececec;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4d4d4d transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Markdown content inside assistant messages */
+.prose-chat p {
+  margin: 0 0 0.75em 0;
+}
+.prose-chat p:last-child {
+  margin-bottom: 0;
+}
+.prose-chat ul, .prose-chat ol {
+  margin: 0 0 0.75em 1.25em;
+}
+.prose-chat pre {
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.5rem;
+  padding: 0.85em 1em;
+  overflow-x: auto;
+  margin: 0.75em 0;
+  font-size: 0.85em;
+}
+.prose-chat code {
+  background: #2f2f2f;
+  padding: 0.15em 0.4em;
+  border-radius: 0.3em;
+  font-size: 0.85em;
+}
+.prose-chat pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose-chat h1, .prose-chat h2, .prose-chat h3 {
+  font-weight: 600;
+  margin: 0.9em 0 0.4em 0;
+}
+.prose-chat a {
+  color: #7ab8ff;
+  text-decoration: underline;
+}
+.prose-chat table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  width: 100%;
+}
+.prose-chat th, .prose-chat td {
+  border: 1px solid #3a3a3a;
+  padding: 0.4em 0.7em;
+  text-align: left;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+.typing-dot {
+  animation: blink 1.4s infinite both;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }

@@ -1,0 +1,32 @@
+{
+  "name": "mygpt-backend",
+  "version": "1.0.0",
+  "description": "MyGPT backend - ChatGPT-like API server supporting Gemini, OpenAI and Claude with Google OAuth, refresh tokens and chat history",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "format": "prettier --write ."
+  },
+  "keywords": ["chatgpt", "gemini", "claude", "openai", "mern"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "mongoose-aggregate-paginate-v2": "^1.1.1",
+    "multer": "^2.0.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2"
+  }
+}
